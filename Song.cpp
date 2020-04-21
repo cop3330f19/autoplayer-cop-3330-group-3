@@ -4,7 +4,12 @@
 #include <fstream>
 using namespace std;
 
-//constructors
+  /**************************************************************
+	 *                         Song (Constructor)                                                                                   
+	 * Passed   : 0 arguments:                                     
+	 * Purpose  : To initialize all private members in Song class                
+	 * Returns  : None                                     
+	**************************************************************/
  Song::Song()
  {
      title="";
@@ -13,6 +18,12 @@ using namespace std;
      length=0;
      year=0;
  }
+  /**************************************************************
+	 *                         Song (Constructor)                                                                                   
+	 * Passed   : 5 arguments: 3 strings, 2 ints                                     
+	 * Purpose  : To initialize all private members in Song class                
+	 * Returns  : None                                     
+	**************************************************************/
  Song::Song(string title, string artist, string album, int year, int length)
  {
    this->title=title;
@@ -23,7 +34,12 @@ using namespace std;
 
  }
 
- //Set Song
+  /**************************************************************
+	 *                         set                                                                                   
+	 * Passed   : 5 argument: 3 strings, 2 ints                                     
+	 * Purpose  : To set all private members in Song class                
+	 * Returns  : Void                                     
+	**************************************************************/
  void Song::set(string title, string artist, string album, int year, int length)
  {
    this->title=title;
@@ -36,6 +52,13 @@ using namespace std;
 // output the song in the format:
 		// title, artist, album, year, length
 		// output to console
+	
+	 /**************************************************************
+	 *                         operator<<                                                                                   
+	 * Passed   : 2 arguments: 1 ostream object, 1 Song object                                   
+	 * Purpose  : to cout Song object                
+	 * Returns  : Ostream object                                    
+	**************************************************************/
 		ostream& operator<<(ostream& os, const Song& song)     
         {
             int p1=song.length/60;
@@ -48,6 +71,12 @@ using namespace std;
         }
 
 		//output to file
+	 /**************************************************************
+	 *                         operator<<                                                                                   
+	 * Passed   : 2 arguments: 1 ofstream object, 1 Song object                                   
+	 * Purpose  : to send Song object to file                
+	 * Returns  : ofstream object                                    
+	**************************************************************/
 		ofstream& operator<<(ofstream& os, const Song& song)
         {
             int p1=song.length/60;
@@ -65,6 +94,12 @@ using namespace std;
 
 		// input the song in the format:
 		// title, artist, album, year, length
+	 /**************************************************************
+	 *                         operator>>                                                                                   
+	 * Passed   : 2 arguments: 1 istream object, 1 Song object                                   
+	 * Purpose  : to cin Song object                
+	 * Returns  : Istream object                                    
+	**************************************************************/
 		istream& operator>>(istream& is, Song& song)
         {
             cout << "Title: ";
@@ -81,6 +116,12 @@ using namespace std;
         }
 
 		//input from file
+	 /**************************************************************
+	 *                         operator>>                                                                                   
+	 * Passed   : 2 arguments: 1 ifstream object, 1 Song object                                   
+	 * Purpose  : to receive Song objects from a file                
+	 * Returns  : ifstream object                                    
+	**************************************************************/
 		fstream& operator>>(fstream& is, Song& song)
         {
             
@@ -98,6 +139,12 @@ using namespace std;
         }
 
 		// compare two song objects for equality
+	 /**************************************************************
+	 *                         operator==                                                                                 
+	 * Passed   : 2 arguments: 2 Song objects                                   
+	 * Purpose  : to compare Song objects                
+	 * Returns  : Bool                                    
+	**************************************************************/
 		bool operator==(const Song& lhs, const Song& rhs)
         {
             bool c=false;
