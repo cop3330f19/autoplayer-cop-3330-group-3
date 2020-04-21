@@ -195,35 +195,34 @@ Date Last Edited: 04/20/20
 	}
 	return os;
 	}
-	
-	/**************************************************************
-	* setPname *
-	* *
-	* Passed : string *
-	* Purpose : Sets playlist name *
-	* Returns : nothing *
-	**************************************************************/
+
+        /**************************************************************
+	 *                        setPlaylistName                                                                              
+	 * Passed   : 1 arguments: string                                     
+	 * Purpose  : sets name of playlist          
+	 * Returns  : Void                               
+	 **************************************************************/
 	
 	void Playlist::setPlaylistName(string pname)
 	{
-	playlistName = pname;
+	Pname = pname;
 	}
-	/**************************************************************
-	* getPlaylistName *
-	* *
-	* Passed : nothing *
-	* Purpose : returns playlist name *
-	* Returns : String *
-	**************************************************************/
+
+         /**************************************************************
+	 *                        getPlaylistName                                                                              
+	 * Passed   : Void                                    
+	 * Purpose  : gets name of playlist          
+	 * Returns  : playlist name                           
+	 **************************************************************/
 	string Playlist::getPlaylistName()
 	{
-	return playlistName;
+	return Pname;
 	}
 	
 	//Constructors
 	Playlist::Playlist()
 	{
-	playlistName = "";
+	Pname = "";
 	}
 	Playlist::Playlist(string name)
 	{
