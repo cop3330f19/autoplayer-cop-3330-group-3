@@ -190,11 +190,11 @@ Date Last Edited: 04/20/20
   /** outputs songs from playlist **/
 	ostream &operator<<(ostream &o, const Playlist &p)
 	{
-	for (int i = 0; i < p1.songs.size(); i++)
+	for (int i = 0; i < p.songs.size(); i++)
 	{
 	o << p.songs[i];
 	}
-	return os;
+	return o;
 	}
 
         /**************************************************************
