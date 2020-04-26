@@ -70,22 +70,23 @@ Date Last Edited: 04/20/20
 	Playlist Playlist::intersect(Playlist &p)
 	{
 	
-	Playlist result;
-	bool valid=false;
+	Playlist obj;
+	bool playlist;
 	vector<Song> temp = p.getplaylistsongs();
+	playlist = false;	
 	
 	for (int i = 0; i < songs.size(); i++) 
 	{ 
 	for (int j = 0; j < temp.size(); j++)
 	{
-	if (songs[i] == temp[j] && linearsearch(result.getplaylistsongs(), songs[i]))
+	if (songs[i] == temp[j] && linearsearch(obj.getplaylistsongs(), songs[i]))
 	
-	valid = true;
+	playlist = true;
 	
-	result.addSong(songs[i]);
+	obj.addSong(songs[i]);
 	}
 	}
-	return result;
+	return obj;
 	}
 
   /**************************************************************
@@ -102,7 +103,7 @@ Date Last Edited: 04/20/20
 	if (currentsong < songs.size())
 	cout << "Now Playing: " <<songs[currentsong] << endl;
 	else
-	cout << "No more songs in playlist" << endl;
+	cout << "No more songs in playlist." << endl;
 	}
 	else if (mode == 'R')
 	{
@@ -139,13 +140,13 @@ Date Last Edited: 04/20/20
 	
 	bool Playlist::linearsearch(vector<Song> b, Song &g)
 	{
-	bool valid;
+	bool exist;
 	
-	valid = false;
+	exist = false;
 	for (int i = 0; i < b.size(); i++)
 	if (b[i] == g)
-	valid = true;
-	return valid;
+	exist = true;
+	return exist;
 	}
 
 /** adds song to playlist **/ 
@@ -224,6 +225,7 @@ Date Last Edited: 04/20/20
 	{
 	Pname = "";
 	}
+
 	Playlist::Playlist(string name)
 	{
 	setPlaylistName(name);
