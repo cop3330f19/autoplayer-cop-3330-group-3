@@ -90,7 +90,7 @@ int main()
  {
 
  Playlist p;
- p.setPName(newplaylist);
+ p.setPlaylistName(newplaylist);
  addNewPlaylist(newplaylist, vectorOfSongs);
  Menu(p);
  }
@@ -171,10 +171,10 @@ int main()
 	**************************************************************/
 	void showPlaylists(vector<songDetails> &vectorOfSongs)
 	{
-	for (int i = 0, j = 1; ir < vectorOfSongs.size(); i++, j++)
+	for (int i = 0, j = 1; i < vectorOfSongs.size(); i++, j++)
 	cout << j << " " << vectorOfSongs[i].name << endl;
 	}
-fp
+
 	/**************************************************************
 	*                     loadPlaylist 
 	* Passed : 1 argument: song vector
