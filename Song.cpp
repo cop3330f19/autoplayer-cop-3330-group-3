@@ -1,3 +1,10 @@
+/*
+Playlist.cpp
+Group 3 Members: Hunter Bell, Tariq Green, Darrell Brown, Christian Pierre Paul
+Date Last Edited: 04/26/20
+*/
+
+
 #include "Song.h"
 #include <string>
 #include <iostream>
