@@ -1,6 +1,6 @@
 /*
 
-Playlist.cpp
+Playlist.h
 
 Group 3 Members: Hunter Bell, Tariq Green, Darrell Brown, Christian Pierre Paul
 
